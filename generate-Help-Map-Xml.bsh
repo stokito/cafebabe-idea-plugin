@@ -1,0 +1,36 @@
+// generate-Help-Map-Xml.bsh
+
+import java.util.zip.*;
+
+ZipFile zipFile = new ZipFile("src/main/help/instructions.jar");
+
+BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/help/map.xml"));
+BufferedWriter writer2 = new BufferedWriter(new FileWriter("src/main/help/index.html-fragment"));
+
+writer.write("<?xml version='1.0' encoding='ISO-8859-1'?>"); writer.newLine();
+writer.write("<!DOCTYPE map PUBLIC \"-//Sun Microsystems Inc.//DTD JavaHelp Map Version 2.0//EN\""); writer.newLine();
+writer.write("        \"http://java.sun.com/products/javahelp/map_2_0.dtd\">"); writer.newLine();
+
+writer.write("<map version=\"1.0\" xml:lang=\"en\">"); writer.newLine();
+writer.write("  <mapID target=\"bytecode-instructions\" url=\"index.html\"/>"); writer.newLine();
+
+Enumeration entries = zipFile.entries();
+
+while(entries.hasMoreElements()) {
+  ZipEntry zipEntry = entries.nextElement();
+
+  String name = zipEntry.getName();
+  int index = name.indexOf(".html");
+
+  if(index != -1) {
+    String shortName = name.substring(0, index);
+    writer.write("  <mapID target=\"" + shortName + "\" url=\"help-content/" + name + "\"/>"); writer.newLine();
+    writer2.write("            <li><p class=\"emulateList\"><a href=\"help-content/" + name + "\">" + shortName + "</a></p></li>"); writer2.newLine();
+  }
+}
+
+writer.write("</map>"); writer.newLine();
+
+zipFile.close();
+writer.close();
+writer2.close();

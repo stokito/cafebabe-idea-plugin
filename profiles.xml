@@ -1,0 +1,12 @@
+<profiles>
+  <profile>
+    <id>dev</id>
+    <properties>
+      <idea.version>7549</idea.version>
+      <idea.home>C:/Editors/IntelliJ IDEA 7549</idea.home>
+   </properties>
+    <activation>
+      <activeByDefault>true</activeByDefault>
+    </activation>
+  </profile>
+</profiles>

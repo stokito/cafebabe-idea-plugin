@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+
+<project name="maven-archetypes" basedir="." default="copy.resources">
+
+  <target name="help.jar">
+    <echo message="Creating help jar"/>
+    <jar basedir="src/main/help"
+         destfile="cafebabe-help.jar" excludes="**/instructions.jar">
+      <zipfileset src="src/main/help/instructions.jar" includes="**/*.html" prefix="help-content"/>
+    </jar>
+  </target>
+
+  <target name="copy.resources">
+    <copy todir="out/production/cafebabe-idea-plugin/Icons">
+      <fileset dir="src/main/resources/Icons">
+        <include name="*.*"/>
+      </fileset>
+    </copy>
+
+    <copy todir="out/production/cafebabe-idea-plugin/META-INF">
+      <fileset dir="src/main/resources/META-INF">
+        <include name="*.*"/>
+      </fileset>
+    </copy>
+
+    <copy todir="${user.home}/.IntelliJIdea70/system/plugins-sandbox/plugins/cafebabe-idea-plugin/help" 
+          file="cafebabe-help.jar"/>
+  </target>
+
+</project>
