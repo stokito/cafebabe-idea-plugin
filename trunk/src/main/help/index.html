@@ -1,0 +1,208 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-store, no-cache, must-revalidate">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" lang="en">
+    <meta name="robots" content="none">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" type="text/css" media="all" href="css/s.css">
+    <title>CafeBabe - Bytecode Instructions</title>
+</head>
+<body id="CB_help" class="template">
+<div id="container">
+
+    <div id="header" style="background:url(img/bg_idea_big.jpg)">
+        <h1>Bytecode Instructions</h1>
+    </div>
+
+    <div id="content"><div class="topicpath">You are here:&nbsp;<a href="index.html">CafeBabe - Bytecode Instructions</a></div>
+
+        <div class="introduction">
+             <p><span class="intelliJIDEA">This help</span> contains explanations of Java VM bytecode instructions:</p>
+            <ul style="list-style-image:url(img/blue_romb_blt.png)">
+            <li><p class="emulateList"><a href="help-content/aaload.html">aaload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/aastore.html">aastore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/aconst_null.html">aconst_null</a></p></li>
+            <li><p class="emulateList"><a href="help-content/aload.html">aload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/aload_.html">aload_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/anewarray.html">anewarray</a></p></li>
+            <li><p class="emulateList"><a href="help-content/anewarray_quick.html">anewarray_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/areturn.html">areturn</a></p></li>
+            <li><p class="emulateList"><a href="help-content/arraylength.html">arraylength</a></p></li>
+            <li><p class="emulateList"><a href="help-content/astore.html">astore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/astore_.html">astore_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/athrow.html">athrow</a></p></li>
+            <li><p class="emulateList"><a href="help-content/baload.html">baload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/bastore.html">bastore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/bipush.html">bipush</a></p></li>
+            <li><p class="emulateList"><a href="help-content/breakpoint.html">breakpoint</a></p></li>
+            <li><p class="emulateList"><a href="help-content/caload.html">caload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/castore.html">castore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/checkcast.html">checkcast</a></p></li>
+            <li><p class="emulateList"><a href="help-content/checkcast_quick.html">checkcast_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/d2f.html">d2f</a></p></li>
+            <li><p class="emulateList"><a href="help-content/d2i.html">d2i</a></p></li>
+            <li><p class="emulateList"><a href="help-content/d2l.html">d2l</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dadd.html">dadd</a></p></li>
+            <li><p class="emulateList"><a href="help-content/daload.html">daload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dastore.html">dastore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dcmp.html">dcmp</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dconst_.html">dconst_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ddiv.html">ddiv</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dload.html">dload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dload_.html">dload_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dmul.html">dmul</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dneg.html">dneg</a></p></li>
+            <li><p class="emulateList"><a href="help-content/drem.html">drem</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dreturn.html">dreturn</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dstore.html">dstore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dstore_.html">dstore_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dsub.html">dsub</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dup.html">dup</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dup2.html">dup2</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dup2_x1.html">dup2_x1</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dup2_x2.html">dup2_x2</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dup_x1.html">dup_x1</a></p></li>
+            <li><p class="emulateList"><a href="help-content/dup_x2.html">dup_x2</a></p></li>
+            <li><p class="emulateList"><a href="help-content/f2d.html">f2d</a></p></li>
+            <li><p class="emulateList"><a href="help-content/f2i.html">f2i</a></p></li>
+            <li><p class="emulateList"><a href="help-content/f2l.html">f2l</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fadd.html">fadd</a></p></li>
+            <li><p class="emulateList"><a href="help-content/faload.html">faload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fastore.html">fastore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fcmp.html">fcmp</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fconst_.html">fconst_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fdiv.html">fdiv</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fload.html">fload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fload_.html">fload_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fmul.html">fmul</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fneg.html">fneg</a></p></li>
+            <li><p class="emulateList"><a href="help-content/frem.html">frem</a></p></li>
+            <li><p class="emulateList"><a href="help-content/freturn.html">freturn</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fstore.html">fstore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fstore_.html">fstore_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/fsub.html">fsub</a></p></li>
+            <li><p class="emulateList"><a href="help-content/getfield.html">getfield</a></p></li>
+            <li><p class="emulateList"><a href="help-content/getfield2_quick.html">getfield2_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/getfield_quick.html">getfield_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/getfield_quick_w.html">getfield_quick_w</a></p></li>
+            <li><p class="emulateList"><a href="help-content/getstatic.html">getstatic</a></p></li>
+            <li><p class="emulateList"><a href="help-content/getstatic2_quick.html">getstatic2_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/getstatic_quick.html">getstatic_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/goto.html">goto</a></p></li>
+            <li><p class="emulateList"><a href="help-content/goto_w.html">goto_w</a></p></li>
+            <li><p class="emulateList"><a href="help-content/i2b.html">i2b</a></p></li>
+            <li><p class="emulateList"><a href="help-content/i2c.html">i2c</a></p></li>
+            <li><p class="emulateList"><a href="help-content/i2d.html">i2d</a></p></li>
+            <li><p class="emulateList"><a href="help-content/i2f.html">i2f</a></p></li>
+            <li><p class="emulateList"><a href="help-content/i2l.html">i2l</a></p></li>
+            <li><p class="emulateList"><a href="help-content/i2s.html">i2s</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iadd.html">iadd</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iaload.html">iaload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iand.html">iand</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iastore.html">iastore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iconst_.html">iconst_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iconst_m1.html">iconst_m1</a></p></li>
+            <li><p class="emulateList"><a href="help-content/idiv.html">idiv</a></p></li>
+            <li><p class="emulateList"><a href="help-content/if_.html">if_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/if_acmp_.html">if_acmp_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/if_icmp_.html">if_icmp_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ifnonnull.html">ifnonnull</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ifnull.html">ifnull</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iinc.html">iinc</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iload.html">iload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iload_.html">iload_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/impdep1.html">impdep1</a></p></li>
+            <li><p class="emulateList"><a href="help-content/impdep2.html">impdep2</a></p></li>
+            <li><p class="emulateList"><a href="help-content/imul.html">imul</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ineg.html">ineg</a></p></li>
+            <li><p class="emulateList"><a href="help-content/instanceof.html">instanceof</a></p></li>
+            <li><p class="emulateList"><a href="help-content/instanceof_quick.html">instanceof_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokeinterface.html">invokeinterface</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokeinterface_quick.html">invokeinterface_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokenonvirtual.html">invokenonvirtual</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokenonvirtual_quick.html">invokenonvirtual_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokespecial.html">invokespecial</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokestatic.html">invokestatic</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokestatic_quick.html">invokestatic_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokesuper_quick.html">invokesuper_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokevirtual.html">invokevirtual</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokevirtual_quick.html">invokevirtual_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokevirtual_quick_w.html">invokevirtual_quick_w</a></p></li>
+            <li><p class="emulateList"><a href="help-content/invokevirtualobject_quick.html">invokevirtualobject_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ior.html">ior</a></p></li>
+            <li><p class="emulateList"><a href="help-content/irem.html">irem</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ireturn.html">ireturn</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ishl.html">ishl</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ishr.html">ishr</a></p></li>
+            <li><p class="emulateList"><a href="help-content/istore.html">istore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/istore_.html">istore_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/isub.html">isub</a></p></li>
+            <li><p class="emulateList"><a href="help-content/iushr.html">iushr</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ixor.html">ixor</a></p></li>
+            <li><p class="emulateList"><a href="help-content/jsr.html">jsr</a></p></li>
+            <li><p class="emulateList"><a href="help-content/jsr_w.html">jsr_w</a></p></li>
+            <li><p class="emulateList"><a href="help-content/l2d.html">l2d</a></p></li>
+            <li><p class="emulateList"><a href="help-content/l2f.html">l2f</a></p></li>
+            <li><p class="emulateList"><a href="help-content/l2i.html">l2i</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ladd.html">ladd</a></p></li>
+            <li><p class="emulateList"><a href="help-content/laload.html">laload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/land.html">land</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lastore.html">lastore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lcmp.html">lcmp</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lconst_.html">lconst_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ldc.html">ldc</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ldc2_w.html">ldc2_w</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ldc2_w_quick.html">ldc2_w_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ldc_quick.html">ldc_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ldc_w.html">ldc_w</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ldc_w_quick.html">ldc_w_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ldiv.html">ldiv</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lload.html">lload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lload_.html">lload_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lmul.html">lmul</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lneg.html">lneg</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lookupswitch.html">lookupswitch</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lor.html">lor</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lrem.html">lrem</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lreturn.html">lreturn</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lshl.html">lshl</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lshr.html">lshr</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lstore.html">lstore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lstore_.html">lstore_</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lsub.html">lsub</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lushr.html">lushr</a></p></li>
+            <li><p class="emulateList"><a href="help-content/lxor.html">lxor</a></p></li>
+            <li><p class="emulateList"><a href="help-content/monitorenter.html">monitorenter</a></p></li>
+            <li><p class="emulateList"><a href="help-content/monitorexit.html">monitorexit</a></p></li>
+            <li><p class="emulateList"><a href="help-content/multianewarray.html">multianewarray</a></p></li>
+            <li><p class="emulateList"><a href="help-content/multianewarray_quick.html">multianewarray_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/new.html">new</a></p></li>
+            <li><p class="emulateList"><a href="help-content/new_quick.html">new_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/newarray.html">newarray</a></p></li>
+            <li><p class="emulateList"><a href="help-content/nop.html">nop</a></p></li>
+            <li><p class="emulateList"><a href="help-content/pop.html">pop</a></p></li>
+            <li><p class="emulateList"><a href="help-content/pop2.html">pop2</a></p></li>
+            <li><p class="emulateList"><a href="help-content/putfield.html">putfield</a></p></li>
+            <li><p class="emulateList"><a href="help-content/putfield2_quick.html">putfield2_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/putfield_quick.html">putfield_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/putfield_quick_w.html">putfield_quick_w</a></p></li>
+            <li><p class="emulateList"><a href="help-content/putstatic.html">putstatic</a></p></li>
+            <li><p class="emulateList"><a href="help-content/putstatic2_quick.html">putstatic2_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/putstatic_quick.html">putstatic_quick</a></p></li>
+            <li><p class="emulateList"><a href="help-content/ret.html">ret</a></p></li>
+            <li><p class="emulateList"><a href="help-content/return.html">return</a></p></li>
+            <li><p class="emulateList"><a href="help-content/saload.html">saload</a></p></li>
+            <li><p class="emulateList"><a href="help-content/sastore.html">sastore</a></p></li>
+            <li><p class="emulateList"><a href="help-content/sipush.html">sipush</a></p></li>
+            <li><p class="emulateList"><a href="help-content/swap.html">swap</a></p></li>
+            <li><p class="emulateList"><a href="help-content/tableswitch.html">tableswitch</a></p></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>

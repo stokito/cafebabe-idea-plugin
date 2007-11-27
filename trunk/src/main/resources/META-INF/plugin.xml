@@ -1,0 +1,108 @@
+<!DOCTYPE idea-plugin PUBLIC "Plugin/DTD" "http://plugins.intellij.net/plugin.dtd">
+
+<idea-plugin url="http://code.google.com/p/cafebabe-idea-plugin">
+  <name>CafeBabe</name>
+
+  <description>This plugin integrates CafeBabe Bytecode editor with Intellij IDEA.</description>
+  <version>1.0.0</version>
+  <idea-version min="2000"/>
+
+  <vendor url="http://scriptlandia.blogspot.com" email="shvets_alexander@yahoo.com">Alexander Shvets</vendor>
+
+  <change-notes><![CDATA[
+    <p>This plugin integrates CafeBabe Bytecode Editor with Intellij IDEA.</p>
+
+    <p>How to use</p>
+
+    <ul>
+      <li>Select class file in the files tree or click on "Open File" icon;</li>
+      <li>Activate context menu for the selected file;</li>
+      <li>Select "Open in CafeBabe" item from the context menu;</li>
+      <li>Class will be decompiled and represented in CafeBabe specific layout.</li>
+      <li>If you want to decompile some method, navigate to methods, select one method 
+          and activate context menu. Follow "Go to method body" link. You will be redirected to 
+          "Bytecode Editor" tool view.</li>
+    </ul>
+
+    Changes:
+     1. Initial implementation. 
+  ]]></change-notes>
+
+  <project-components>
+    <component>
+      <implementation-class>org.google.code.cafebabe.ClassFileViewerImpl</implementation-class>
+      <interface-class>org.google.code.cafebabe.ClassFileViewerImpl</interface-class>
+    </component>
+  </project-components>
+
+  <actions>
+    <group id="cafebabe.ToolWindow" text="CafeBabe" popup="true">
+      <action id="cafebabe.HideCafeBabeAction"
+              class="org.google.code.cafebabe.action.HideCafeBabeAction"
+              text="Hide CafeBabe"
+              description="Hide CafeBabe"
+              icon="/actions/cancel.png">
+      </action>
+
+      <action id="cafebabe.OpenFileAction"
+              class="org.google.code.cafebabe.action.OpenFileAction"
+              text="Open File"
+              description="Open File in CafeBabe Bytecode Editor"
+              icon="/actions/menu-open.png">
+      </action>
+
+      <action id="cafebabe.CloseFileAction"
+              class="org.google.code.cafebabe.action.CloseFileAction"
+              text="Close File"
+              description="Close File  in CafeBabe Bytecode Editor"
+              icon="/actions/breakpoint.png">
+      </action>
+
+     <action id="cafebabe.SaveFileAction"
+              class="org.google.code.cafebabe.action.SaveFileAction"
+              text="Save File"
+              description="Save File in CafeBabe Bytecode Editor"
+              icon="/actions/menu-saveall.png">
+      </action>
+      <action id="cafebabe.ClassHoundAction"
+              class="org.google.code.cafebabe.action.ClassHoundAction"
+              text="Display ClassHound"
+              description="Display ClassHound"
+              icon="/Icons/hound-16.png">
+      </action>
+
+      <action id="cafebabe.AboutAction"
+              class="org.google.code.cafebabe.action.AboutAction"
+              text="About CafeBabe Plugin"
+              description="About CafeBabe Plugin"
+              icon="/Icons/cafebabe-16.png">
+      </action>
+
+    </group>
+
+    <action id="cafebabe.ViewInCafeBabe"
+            class="org.google.code.cafebabe.action.OpenFileInCafeBabeAction"
+            text="Open in CafeBabe"
+            description="Open file in CafeBabe Bytecode Editor">
+      <add-to-group group-id="EditorPopupMenu" anchor="after" relative-to-action="Compile"/>
+      <add-to-group group-id="ProjectViewPopupMenu" anchor="after" relative-to-action="Compile"/>
+    </action>
+
+    <group id="cafebabe.group.toolmenu"
+           text="CafeBabe"
+           popup="true">
+      <add-to-group group-id="ToolsMenu" anchor="before" relative-to-action="ExternalToolsGroup"/>
+      <action id="cafebabe.DisplayCafeBabe"
+              class="org.google.code.cafebabe.action.DisplayCafeBabeAction"
+              text="Displays CafeBabe Bytecode Editor"
+              description="Displays CafeBabe Bytecode Editor"/>
+    </group>
+  </actions>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <errorHandler implementation="com.intellij.diagnostic.ITNReporter"/>
+  </extensions>
+
+  <helpset file="cafebabe-help.jar" path="/help.hs"/>
+
+</idea-plugin>
