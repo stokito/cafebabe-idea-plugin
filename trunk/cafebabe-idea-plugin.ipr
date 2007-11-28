@@ -158,11 +158,21 @@
     </smart-setup>
   </component>
   <component name="DBNavigator.Project.ConnectionManager">
-    <connections />
+    <connections>
+      <connection id="2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27" name="iman" description="" driver-library="C:\maven-repository\com\oracle\jdbc\ojdbc14-10g\10.2.0.3.0\ojdbc14-10g-10.2.0.3.0.jar" driver="oracle.jdbc.driver.OracleDriver" url="jdbc:oracle:thin:@ressdb03.res.pharma.aventis.com:1522:xenont" user="iman" password="IMAN!234" current-schema="IMAN" notify-connection="" notify-connection-error="" />
+    </connections>
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="false" />
+  </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <association file-path="db://2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27/IMAN.XENON_ROLE" connection-id="2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27" />
+    <association file-path="db://2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27/IMAN.XENON_USER" connection-id="2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27" />
+    <association file-path="db://2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27/IMAN.PKG_REPORT_AND_JOB_SCHEDULING" connection-id="2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27" />
+    <association file-path="db://2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27/IMAN.TOAD_PLAN_TABLE" connection-id="2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27" />
+    <association file-path="db://2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27/IMAN.FIND_SAP_PRICE" connection-id="2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27" />
+    <association file-path="db://2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27/IMAN.BRAND_VW" connection-id="2ad60b7e-6bdc-4e3a-ad01-8c3f4a54db27" />
   </component>
   <component name="DependenciesAnalyzeManager">
     <option name="myForwardDirection" value="false" />
@@ -381,7 +391,7 @@
     <option name="ADDITIONAL_OPTIONS_STRING" value="" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="" />
+    <mapping directory="" vcs="svn" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
 </project>

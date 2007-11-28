@@ -12,6 +12,7 @@
         <include>*.iml</include>
         <include>*.txt</include>
         <include>*.xml</include>
+        <include>*.bsh</include>
 
         <include>src/**</include>
       </includes>

@@ -1,0 +1,38 @@
+<assembly>
+  <id>bin</id>
+  <formats>
+    <format>zip</format>
+  </formats>
+
+  <fileSets>
+    <fileSet>
+      <directory>target</directory>
+      <outputDirectory>help</outputDirectory>
+
+      <includes>
+        <include>cafebabe-help.jar</include>
+      </includes>
+    </fileSet>
+
+    <fileSet>
+      <directory>target/dependency</directory>
+      <outputDirectory>lib</outputDirectory>
+
+      <includes>
+        <include>cafebabe-main-1.4.1.jar</include>
+        <include>classfile-1.1.jar</include>
+        <include>serfile-1.1.jar</include>
+      </includes>
+    </fileSet>
+
+    <fileSet>
+      <directory>target</directory>
+      <outputDirectory>lib</outputDirectory>
+
+      <includes>
+        <include>cafebabe-idea-plugin-0.8.0.jar</include>
+      </includes>
+    </fileSet>
+  </fileSets>
+
+</assembly>
