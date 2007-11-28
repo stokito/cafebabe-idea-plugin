@@ -4,8 +4,11 @@
 
   <target name="help.jar">
     <echo message="Creating help jar"/>
+
+    <mkdir dir="target"/>
+
     <jar basedir="src/main/help"
-         destfile="cafebabe-help.jar" excludes="**/instructions.jar">
+         destfile="target/cafebabe-help.jar" excludes="**/instructions.jar">
       <zipfileset src="src/main/help/instructions.jar" includes="**/*.html" prefix="help-content"/>
     </jar>
   </target>
@@ -23,8 +26,8 @@
       </fileset>
     </copy>
 
-    <copy todir="${user.home}/.IntelliJIdea70/system/plugins-sandbox/plugins/cafebabe-idea-plugin/help" 
-          file="cafebabe-help.jar"/>
+    <copy file="target/cafebabe-help.jar"
+          todir="${user.home}/.IntelliJIdea70/system/plugins-sandbox/plugins/cafebabe-idea-plugin/help"/>
   </target>
 
 </project>

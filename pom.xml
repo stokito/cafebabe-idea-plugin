@@ -41,7 +41,7 @@
       <id>shvets</id>
       <name>Alexander Shvets</name>
       <email>shvets_alexander@yahoo.com</email>
-      <organization></organization>
+      <organization>Dream Programs</organization>
       <roles>
         <role>Founder</role>
       </roles>
@@ -55,6 +55,14 @@
       <version>${idea.version}</version>
       <scope>system</scope>
       <systemPath>${idea.home}/lib/openapi.jar</systemPath>
+    </dependency>
+
+    <dependency>
+      <groupId>com.intellij.idea</groupId>
+      <artifactId>idea</artifactId>
+      <version>${idea.version}</version>
+      <scope>system</scope>
+      <systemPath>${idea.home}/lib/idea.jar</systemPath>
     </dependency>
 
     <dependency>
@@ -92,6 +100,14 @@
       <artifactId>serfile</artifactId>
       <version>1.1</version>
     </dependency>
+
+    <dependency>
+      <groupId>org.sf.cafebabe</groupId>
+      <artifactId>cafebabe-main</artifactId>
+      <version>1.4.1</version>
+      <scope>system</scope>
+      <systemPath>${basedir}/lib/cafebabe-main-1.4.1.jar</systemPath>
+    </dependency>
   </dependencies>
 
   <build>
@@ -104,8 +120,8 @@
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <configuration>
-          <source>1.6</source>
-          <target>1.6</target>
+          <source>1.5</source>
+          <target>1.5</target>
         </configuration>
       </plugin>
 
@@ -114,17 +130,58 @@
         <configuration>
           <descriptors>
             <descriptor>src/main/assembly/src.xml</descriptor>
+            <descriptor>src/main/assembly/bin.xml</descriptor>
            </descriptors>
-          <finalName>${project.build.finalName}</finalName>
+          <finalName>${project.artifactId}</finalName>
         </configuration>
       </plugin>
+
+      <plugin>
+        <artifactId>maven-antrun-plugin</artifactId>
+
+        <executions>
+          <execution>
+            <id>clean</id>
+            <phase>clean</phase>
+            <configuration>
+              <tasks>
+                <delete includeemptydirs="true" failonerror="false">
+                  <fileset dir="out"/>
+
+                  <fileset dir=".">
+                    <include name="cafebabe-help.jar"/>
+                  </fileset>
+                </delete>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+
+          <execution>
+            <id>assembly</id>
+            <phase>package</phase>
+            <configuration>
+              <tasks>
+                <ant target="help.jar"/>
+              </tasks>
+            </configuration>
+            <goals>
+              <goal>run</goal>
+            </goals>
+          </execution>
+
+        </executions>
+      </plugin>
+
     </plugins>
   </build>
 
   <distributionManagement>
     <site>
       <id>Web site</id>
-      <url>http://code.google.com/p/cafebabearchetypes-idea-plugin</url>
+      <url>http://code.google.com/p/cafebabe-idea-plugin</url>
     </site>
   </distributionManagement>
 

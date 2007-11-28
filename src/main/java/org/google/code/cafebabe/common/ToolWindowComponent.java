@@ -76,11 +76,10 @@ public abstract class ToolWindowComponent {
     ToolWindow toolWindow = null;
 
     if (toolWindowManager != null) {
+      toolWindow = toolWindowManager.getToolWindow(toolWindowId);
 
-      if (toolWindowManager.getToolWindow(toolWindowId) == null) {
+      if (toolWindow == null) {
         toolWindow = createToolWindow();
-      } else {
-        toolWindow = toolWindowManager.getToolWindow(toolWindowId);
       }
 
       customizeToolWindow(toolWindow);

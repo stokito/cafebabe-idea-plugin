@@ -3,24 +3,30 @@
         "http://java.sun.com/products/javahelp/helpset_2_0.dtd">
 
 <helpset version="2.0" xml:lang="en">
-  <title>CafeBabe</title>
+  <!-- title -->
+
+  <title>CafeBabe Help</title>
+
+  <!-- maps -->
 
   <maps>
-    <homeID>cafebabe</homeID>
-    <mapref location="map.xml"/>
+     <homeID>top</homeID>
+     <mapref location="map.xml"/>
   </maps>
 
-  <view mergetype="javax.help.AppendMerge">
+  <!-- views -->
+
+  <view>
+    <name>TOC</name>
+    <label>Table Of Contents</label>
+    <type>javax.help.TOCView</type>
+    <data>toc.xml</data>
+  </view>
+
+  <view>
     <name>Index</name>
     <label>Index</label>
     <type>javax.help.IndexView</type>
-    <data>index.xml</data>
-  </view>
-
-  <view mergetype="javax.help.AppendMerge">
-    <name>TOC</name>
-    <label>Table of Contents</label>
-    <type>javax.help.TOCView</type>
     <data>index.xml</data>
   </view>
 
