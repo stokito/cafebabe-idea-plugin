@@ -160,7 +160,7 @@
           </execution>
 
           <execution>
-            <id>assembly</id>
+            <id>package</id>
             <phase>package</phase>
             <configuration>
               <tasks>
@@ -171,7 +171,6 @@
               <goal>run</goal>
             </goals>
           </execution>
-
         </executions>
       </plugin>
 
