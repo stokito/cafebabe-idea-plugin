@@ -12,7 +12,7 @@
   <change-notes><![CDATA[
     <p>This plugin integrates CafeBabe Bytecode Editor with Intellij IDEA.</p>
 
-    <p>How to use</p>
+    <p>How to use Class Viewer/Editor</p>
 
     <ul>
       <li>Select class file in the files tree or click on "Open File" icon within plugin toolwindow;</li>
@@ -23,7 +23,21 @@
           and activate context menu. Follow "Go to method body" link. You will be redirected to 
           "Bytecode Editor" toolwindow.</li>
       <li>Now you can create/delete/edit bytecode instructions.</li>
+      <li>In constant pool you can modify UTF strings;</li>
       <li>If you want to get explanation for a given instruction, click on Help icon.</li>
+      <li>If you modified the file and then trying to save it, "Save as" dialog will be initiated, allowing you to save modified class.</li>
+      <li>You can click on "Save as" icon any time when you want to save your modifications.</li>
+    </ul>
+
+    <p>How to use ClassHound</p>
+
+    <ul>
+      <li>Click on ClassHound icon - new toolwindow will be open;</li>
+      <li>In ClassHound toolwindow select archive, then package, class, fileld or method. You can select only package 
+          or only package class;</li>
+      <li>By double clicking on package, class, field or method - selected item will be loaded into Class Viewer/Editor. 
+          If it's field or method, Class File Viewer/Ediror will be positioned on selected field/method;</li>
+      <li>You can add new archive to the list of available archives - then you can explore it in standard way.</li>
     </ul>
 
     Changes:

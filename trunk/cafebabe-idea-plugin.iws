@@ -16,34 +16,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/cafebabe-main-1.4.1.jar" afterPath="$PROJECT_DIR$/lib/cafebabe-main-1.4.1.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cafebabe-idea-plugin.ipr" afterPath="$PROJECT_DIR$/cafebabe-idea-plugin.ipr" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/profiles.xml" afterPath="$PROJECT_DIR$/profiles.xml" />
-      <change type="MOVED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\action\CloseFileAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/CloseClassFileAction.java" />
-      <change type="MOVED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\BodyEditorPanel.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/BodyEditorToolWindow.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/common" afterPath="" />
-      <change type="DELETED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\common\IdeaHelper.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/OpenFileAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/OpenFileAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/cafebabe-help.jar" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/DisplayCafeBabeAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/DisplayCafeBabeAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cafebabe-idea-plugin.iml" afterPath="$PROJECT_DIR$/cafebabe-idea-plugin.iml" />
-      <change type="DELETED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\common\ToolWindowComponent.java" afterPath="" />
-      <change type="MOVED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\ClassTreeComponent.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/IdeaClassTree.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/assembly/bin.xml" afterPath="$PROJECT_DIR$/src/main/assembly/bin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build.xml" afterPath="$PROJECT_DIR$/build.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.txt" afterPath="$PROJECT_DIR$/README.txt" />
-      <change type="MOVED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\action\ClassHoundAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/OpenClassHoundAction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/SaveFileAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/SaveFileAction.java" />
-      <change type="MOVED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\ClassFileViewerImpl.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/ClassFileViewerToolWindow.java" />
-      <change type="MOVED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\action\HideCafeBabeAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/HideClassFileViewerAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/ClassHoundToolWindow.java" />
-      <change type="DELETED" beforePath="C:\Work\Projects\IDEA-projects\cafebabe-idea-plugin\src\main\java\org\google\code\cafebabe\common\IdeaAction.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cafebabe-idea-plugin.iws" afterPath="$PROJECT_DIR$/cafebabe-idea-plugin.iws" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/plugin.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/OpenFileInCafeBabeAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/OpenFileInCafeBabeAction.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/idea" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/AboutAction.java" afterPath="$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/action/AboutAction.java" />
     </list>
     <ignored path="cafebabe-idea-plugin.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -140,17 +114,7 @@
     <option name="currentFolder" value="$PROJECT_DIR$" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="BodyEditorToolWindow.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/google/code/cafebabe/BodyEditorToolWindow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="140" column="60" selection-start="4531" selection-end="4531" vertical-scroll-proportion="0.84033614">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -976,7 +940,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="5" width="1876" height="1147" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Dilbert" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="11" />
@@ -984,7 +948,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="5" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24958768" order="0" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32655138" order="1" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3926755" order="3" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3926755" order="3" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="9" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="3" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" order="10" />
