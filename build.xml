@@ -8,7 +8,7 @@
     <mkdir dir="target"/>
 
     <jar basedir="src/main/help"
-         destfile="src/main/resources/cafebabe-help.jar" excludes="**/instructions.jar">
+         destfile="src/main/help/cafebabe-help.jar" excludes="**/instructions.jar, **/cafebabe-help.jar">
       <zipfileset src="src/main/help/instructions.jar" includes="**/*.html" prefix="help-content"/>
     </jar>
   </target>
