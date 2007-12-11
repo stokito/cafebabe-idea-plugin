@@ -4,13 +4,14 @@ import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.WindowManager;
-import org.google.code.cafebabe.ClassFileViewerImpl;
-import org.google.code.cafebabe.common.IdeaAction;
-import org.google.code.cafebabe.common.IdeaHelper;
+import org.google.code.cafebabe.ClassFileViewerToolWindow;
+import org.google.code.idea.common.IdeaAction;
+import org.google.code.idea.common.IdeaHelper;
 import org.sf.jlaunchpad.util.FileUtil;
 
 import java.awt.*;
 import java.io.File;
+import java.io.IOException;
 
 /**
  * This action opens up class file from files tree in CafeBabe plugin toolwindow.
@@ -22,7 +23,7 @@ public class OpenFileInCafeBabeAction extends IdeaAction {
   private final IdeaHelper helper = IdeaHelper.getInstance();
 
   public void update(AnActionEvent event) {
-    update(event, ClassFileViewerImpl.TOOL_WINDOW_ID);
+    update(event, ClassFileViewerToolWindow.TOOL_WINDOW_ID);
   }
 
   protected boolean checkAdditionally(AnActionEvent event) {
@@ -47,9 +48,13 @@ public class OpenFileInCafeBabeAction extends IdeaAction {
 
               window.setCursor(new Cursor(Cursor.WAIT_CURSOR));
 
-              ClassFileViewerImpl viewer = project.getComponent(ClassFileViewerImpl.class);
+              ClassFileViewerToolWindow viewer = project.getComponent(ClassFileViewerToolWindow.class);
 
-              viewer.openFile(virtualFile);
+              try {
+                viewer.openFile(virtualFile.getInputStream(), virtualFile.getPresentableName());
+              } catch (IOException e) {
+                e.printStackTrace();
+              }
 
               window.setCursor(cursor);
             }
@@ -58,7 +63,7 @@ public class OpenFileInCafeBabeAction extends IdeaAction {
       }
     };
 
-    actionPerformed(event, ClassFileViewerImpl.TOOL_WINDOW_ID, runnable);
+    actionPerformed(event, ClassFileViewerToolWindow.TOOL_WINDOW_ID, runnable);
   }
 
 }

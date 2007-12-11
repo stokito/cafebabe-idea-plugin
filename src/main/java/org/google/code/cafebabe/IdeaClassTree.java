@@ -1,7 +1,6 @@
 package org.google.code.cafebabe;
 
 import com.intellij.openapi.project.Project;
-import com.intellij.openapi.vfs.VirtualFile;
 import org.sf.cafebabe.gadget.classtree.PlainClassTree;
 import org.sf.cafebabe.task.classfile.ClassTreeActions;
 import org.sf.cafebabe.util.IconProducer;
@@ -23,19 +22,21 @@ import java.io.InputStream;
  * @author Alexander Shvets
  * @version 1.0 11/24/2007
  */
-public class ClassTreeComponent extends PlainClassTree {
+public class IdeaClassTree extends PlainClassTree {
   private ClassTreeActions actions;
 
-  private BodyEditorPanel bodyEditor;
+  private BodyEditorToolWindow bodyEditor;
 
   private JPanel parent;
+  private String name;
 
-  public ClassTreeComponent(Project project, JPanel parent) {
+  public IdeaClassTree(Project project, JPanel parent, String name) {
     super();
 
     this.parent = parent;
+    this.name = name;
 
-    bodyEditor = new BodyEditorPanel(project, parent);
+    bodyEditor = new BodyEditorToolWindow(project, parent);
 
     actions = new ClassTreeActions(this) {
       protected void init() {
@@ -82,12 +83,10 @@ public class ClassTreeComponent extends PlainClassTree {
   /**
    * Opens class file in internal window.
    *
-   * @param virtualFile virtual file
+   * @param is input stream
    * @throws IOException I/O exception
    */
-  public void open(VirtualFile virtualFile) throws IOException {
-    InputStream is = virtualFile.getInputStream();
-
+  public void open(InputStream is) throws IOException {
     try {
       ClassFile classFile = new ClassFile();
       classFile.read(new DataInputStream(is));
@@ -116,6 +115,9 @@ public class ClassTreeComponent extends PlainClassTree {
     catch (Exception e) {
       e.printStackTrace();
     }
+    finally {
+      is.close();
+    }
   }
 
   /**
@@ -140,8 +142,12 @@ public class ClassTreeComponent extends PlainClassTree {
     //setTitle(dataSource.getName());
   }
 
-  public BodyEditorPanel getBodyEditor() {
+  public BodyEditorToolWindow getBodyEditor() {
     return bodyEditor;
+  }
+
+  public String getName() {
+    return name;
   }
 
 }

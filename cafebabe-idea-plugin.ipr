@@ -11,6 +11,10 @@
       <executeOn event="beforeRun" target="copy.resources" runConfigurationType="#org.jetbrains.idea.devkit.run.PluginConfigurationType" runConfigurationName="cafebabe-plugin" />
     </buildFile>
   </component>
+  <component name="Archetypes.Configuration">
+    <option name="archetypesFileLocation" value="archetypes.xml" />
+    <option name="workingDirectory" value="C:\temp" />
+  </component>
   <component name="Archetypes.ToolWindow">
     <option name="projectRootPath" value="" />
   </component>
@@ -35,6 +39,7 @@
             <option name="LABEL_INDENT_ABSOLUTE" value="false" />
           </value>
         </option>
+        <option name="OPTIMIZE_IMPORTS_ON_THE_FLY" value="true" />
         <ADDITIONAL_INDENT_OPTIONS fileType="js">
           <option name="INDENT_SIZE" value="4" />
           <option name="CONTINUATION_INDENT_SIZE" value="8" />
@@ -369,7 +374,7 @@
       <module fileurl="file://$PROJECT_DIR$/cafebabe-idea-plugin.iml" filepath="$PROJECT_DIR$/cafebabe-idea-plugin.iml" />
     </modules>
   </component>
-  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA 7549" project-jdk-type="IDEA JDK">
+  <component name="ProjectRootManager" version="2" assert-keyword="true" jdk-15="true" project-jdk-name="IDEA 7584" project-jdk-type="IDEA JDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="RUBY_DOC_SETTINGS">

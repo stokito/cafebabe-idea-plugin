@@ -3,11 +3,10 @@ package org.google.code.cafebabe.action;
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.ui.Messages;
-import com.intellij.openapi.util.IconLoader;
 
 import javax.swing.*;
 
-import org.google.code.cafebabe.common.IdeaAction;
+import org.google.code.idea.common.IdeaAction;
 import org.sf.cafebabe.util.IconProducer;
 import org.sf.cafebabe.Constants;
 

@@ -13,3 +13,10 @@ and optionally:
 >ant add.version
 
 Artifacts will be located in target directory.
+
+
+How to build
+
+>ant help.jar
+
+Now you can work from IDEA

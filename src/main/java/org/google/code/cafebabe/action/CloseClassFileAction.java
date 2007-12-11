@@ -2,8 +2,8 @@ package org.google.code.cafebabe.action;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
-import org.google.code.cafebabe.ClassFileViewerImpl;
-import org.google.code.cafebabe.common.IdeaAction;
+import org.google.code.cafebabe.ClassFileViewerToolWindow;
+import org.google.code.idea.common.IdeaAction;
 
 /**
  * This action closes up the class file.
@@ -11,19 +11,19 @@ import org.google.code.cafebabe.common.IdeaAction;
  * @author Alexander Shvets
  * @version 1.0 11/24/2007
  */
-public class CloseFileAction extends IdeaAction {
+public class CloseClassFileAction extends IdeaAction {
 
   /**
    * @param event event
    */
   public void update(AnActionEvent event) {
-    update(event, ClassFileViewerImpl.TOOL_WINDOW_ID);
+    update(event, ClassFileViewerToolWindow.TOOL_WINDOW_ID);
   }
 
   protected boolean checkAdditionally(AnActionEvent event) {
     Project project = helper.getProject(event);
 
-    ClassFileViewerImpl viewer = project.getComponent(ClassFileViewerImpl.class);
+    ClassFileViewerToolWindow viewer = project.getComponent(ClassFileViewerToolWindow.class);
 
     return viewer.classTreeIsLoaded();
   }
@@ -36,13 +36,13 @@ public class CloseFileAction extends IdeaAction {
       public void run() {
         Project project = helper.getProject(event);
 
-        ClassFileViewerImpl viewer = project.getComponent(ClassFileViewerImpl.class);
+        ClassFileViewerToolWindow viewer = project.getComponent(ClassFileViewerToolWindow.class);
 
         viewer.closeFile();
       }
     };
 
-    actionPerformed(event, ClassFileViewerImpl.TOOL_WINDOW_ID, runnable);
+    actionPerformed(event, ClassFileViewerToolWindow.TOOL_WINDOW_ID, runnable);
   }
 
 }

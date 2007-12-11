@@ -5,7 +5,7 @@
 
   <groupId>org.google.code</groupId>
   <artifactId>cafebabe-idea-plugin</artifactId>
-  <version>0.8.0</version>
+  <version>1.0.0</version>
   <packaging>jar</packaging>
 
   <name>cafebabe-idea-plugin</name>
@@ -100,7 +100,7 @@
       <artifactId>serfile</artifactId>
       <version>1.1</version>
     </dependency>
-
+<!--
     <dependency>
       <groupId>org.sf.cafebabe</groupId>
       <artifactId>cafebabe-main</artifactId>
@@ -108,7 +108,15 @@
       <scope>system</scope>
       <systemPath>${basedir}/lib/cafebabe-main-1.4.1.jar</systemPath>
     </dependency>
-  </dependencies>
+-->
+<!--
+    <dependency>
+      <groupId>javax.mail</groupId>
+      <artifactId>mail</artifactId>
+      <version>1.3.2</version>
+    </dependency>
+--> 
+ </dependencies>
 
   <build>
     <finalName>${project.artifactId}-${project.version}</finalName>
