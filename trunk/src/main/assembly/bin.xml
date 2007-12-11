@@ -6,7 +6,7 @@
 
   <fileSets>
     <fileSet>
-      <directory>target</directory>
+      <directory>src/main/help</directory>
       <outputDirectory>help</outputDirectory>
 
       <includes>
