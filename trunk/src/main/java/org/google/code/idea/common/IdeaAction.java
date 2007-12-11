@@ -1,4 +1,4 @@
-package org.google.code.cafebabe.common;
+package org.google.code.idea.common;
 
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;

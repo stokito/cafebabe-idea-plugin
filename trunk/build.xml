@@ -8,7 +8,7 @@
     <mkdir dir="target"/>
 
     <jar basedir="src/main/help"
-         destfile="target/cafebabe-help.jar" excludes="**/instructions.jar">
+         destfile="src/main/resources/cafebabe-help.jar" excludes="**/instructions.jar">
       <zipfileset src="src/main/help/instructions.jar" includes="**/*.html" prefix="help-content"/>
     </jar>
   </target>
@@ -26,7 +26,7 @@
       </fileset>
     </copy>
 
-    <copy file="target/cafebabe-help.jar"
+    <copy file="src/main/resources/cafebabe-help.jar"
           todir="${user.home}/.IntelliJIdea70/system/plugins-sandbox/plugins/cafebabe-idea-plugin/help"/>
   </target>
 

@@ -1,16 +1,12 @@
-// BodyEditorPanel.java
-
 package org.google.code.cafebabe;
 
-import com.intellij.openapi.fileEditor.FileEditorManager;
 import com.intellij.openapi.help.HelpManager;
 import com.intellij.openapi.project.Project;
 import com.intellij.openapi.util.IconLoader;
-import com.intellij.openapi.vfs.VirtualFile;
 import com.intellij.openapi.wm.ToolWindow;
 import com.intellij.openapi.wm.ToolWindowAnchor;
 import com.intellij.openapi.wm.ToolWindowType;
-import org.google.code.cafebabe.common.ToolWindowComponent;
+import org.google.code.idea.common.ToolWindowComponent;
 import org.sf.cafebabe.Constants;
 import org.sf.cafebabe.gadget.bodyeditor.BodyEditorActions;
 import org.sf.cafebabe.gadget.bodyeditor.BodyEditorAware;
@@ -28,7 +24,7 @@ import java.awt.*;
  * @author Alexander Shvets
  * @version 1.0 11/24/2007
  */
-public class BodyEditorPanel extends ToolWindowComponent implements BodyEditorAware {
+public class BodyEditorToolWindow extends ToolWindowComponent implements BodyEditorAware {
   public static final String TOOL_WINDOW_ID = "CafeBabe - Body Editor";
 
   private BodyTable bodyTable;
@@ -37,7 +33,7 @@ public class BodyEditorPanel extends ToolWindowComponent implements BodyEditorAw
 
   private JPanel parent;
 
-  public BodyEditorPanel(Project project, JPanel parent) {
+  public BodyEditorToolWindow(Project project, JPanel parent) {
     super(project, TOOL_WINDOW_ID);
 
     this.parent = parent;
@@ -78,28 +74,24 @@ public class BodyEditorPanel extends ToolWindowComponent implements BodyEditorAw
 //    }
 
     if (isRegistered()) {
-      release();
-      disposeConsole();
-      setRegistered(false);
+      dispose();
+      closeConsole();
     }
 
-    init();
-
-    initMainPanel();
-
-    initContentPanel();
+    create();
+    createConsole();
 
     JScrollPane scrollPane = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED,
         JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
     scrollPane.getViewport().setView(bodyTable);
     getContentPanel().add(scrollPane, BorderLayout.CENTER);
 
-    ToolWindow toolWindow = openConsole();
+    ToolWindow toolWindow = getToolWindow();
 
     String methodName = methodEntry.resolve(classFile.getConstPool());
     toolWindow.setTitle("Method: " + methodName);
 
-    setRegistered(true);
+    setConsoleVisible(true);
   }
 
   public void editInstruction() {
@@ -136,27 +128,16 @@ public class BodyEditorPanel extends ToolWindowComponent implements BodyEditorAw
     }
   }
 
-  protected ToolWindow createToolWindow() {
-    Icon icon = IconLoader.getIcon(ClassFileViewerImpl.CAFEBABE_VERTICAL_ICON, ClassFileViewerImpl.class);
-
-    ToolWindow toolWindow = ideaHelper.createsToolWindow(getProject(), getMainPanel(),
-        TOOL_WINDOW_ID, ToolWindowAnchor.LEFT, icon);
-
+  protected void customizeToolWindow(ToolWindow toolWindow) {
     toolWindow.setType(ToolWindowType.DOCKED, null);
 
-    return toolWindow;
+    toolWindow.setIcon(IconLoader.getIcon(ClassFileViewerToolWindow.CAFEBABE_HORIZONTAL_ICON));
+
+    toolWindow.setAnchor(ToolWindowAnchor.RIGHT, EMPTY_RUNNABLE);
   }
 
   protected JComponent createToolbar() {
     return actions.getToolBar();
-  }
-
-  public void close() {
-    release();
-
-    disposeConsole();
-
-    setRegistered(false);
   }
 
 }

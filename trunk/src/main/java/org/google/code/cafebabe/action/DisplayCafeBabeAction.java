@@ -2,8 +2,9 @@ package org.google.code.cafebabe.action;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
-import org.google.code.cafebabe.ClassFileViewerImpl;
-import org.google.code.cafebabe.common.IdeaAction;
+import org.google.code.cafebabe.ClassFileViewerToolWindow;
+import org.google.code.idea.common.IdeaAction;
+import org.google.code.idea.common.ToolWindowComponent;
 
 /**
  * This action displays initial layout of CafeBabe Bytecode Editor.
@@ -17,7 +18,7 @@ public class DisplayCafeBabeAction extends IdeaAction {
    * @param event event
    */
   public void update(AnActionEvent event) {
-    update(event, ClassFileViewerImpl.TOOL_WINDOW_ID);
+    update(event, ClassFileViewerToolWindow.TOOL_WINDOW_ID);
   }
 
   /**
@@ -28,13 +29,13 @@ public class DisplayCafeBabeAction extends IdeaAction {
       public void run() {
         Project project = helper.getProject(event);
 
-        ClassFileViewerImpl viewer = project.getComponent(ClassFileViewerImpl.class);
+        ToolWindowComponent toolWindow = project.getComponent(ClassFileViewerToolWindow.class);
 
-        viewer.displayCafeBabe();
+        toolWindow.setConsoleVisible(true);
       }
     };
 
-    actionPerformed(event, ClassFileViewerImpl.TOOL_WINDOW_ID, runnable);
+    actionPerformed(event, ClassFileViewerToolWindow.TOOL_WINDOW_ID, runnable);
   }
 
 }

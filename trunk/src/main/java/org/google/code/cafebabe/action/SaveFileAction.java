@@ -2,8 +2,8 @@ package org.google.code.cafebabe.action;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.project.Project;
-import org.google.code.cafebabe.common.IdeaAction;
-import org.google.code.cafebabe.ClassFileViewerImpl;
+import org.google.code.idea.common.IdeaAction;
+import org.google.code.cafebabe.ClassFileViewerToolWindow;
 
 /**
  * This action saves previously open class file.
@@ -17,7 +17,7 @@ public class SaveFileAction extends IdeaAction {
    * @param event event
    */
   public void update(AnActionEvent event) {
-    update(event, ClassFileViewerImpl.TOOL_WINDOW_ID);
+    update(event, ClassFileViewerToolWindow.TOOL_WINDOW_ID);
   }
 
   /**
@@ -28,13 +28,13 @@ public class SaveFileAction extends IdeaAction {
       public void run() {
         Project project = helper.getProject(event);
 
-        ClassFileViewerImpl viewer = project.getComponent(ClassFileViewerImpl.class);
+        ClassFileViewerToolWindow viewer = project.getComponent(ClassFileViewerToolWindow.class);
 
         viewer.saveFile();
       }
     };
 
-    actionPerformed(event, ClassFileViewerImpl.TOOL_WINDOW_ID, runnable);
+    actionPerformed(event, ClassFileViewerToolWindow.TOOL_WINDOW_ID, runnable);
   }
 
 }

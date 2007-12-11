@@ -19,7 +19,7 @@
       <outputDirectory>lib</outputDirectory>
 
       <includes>
-        <include>cafebabe-main-1.4.1.jar</include>
+        <include>cafebabe-main-*.jar</include>
       </includes>
     </fileSet>
 
@@ -28,7 +28,7 @@
       <outputDirectory>lib</outputDirectory>
 
       <includes>
-        <include>cafebabe-idea-plugin-0.8.0.jar</include>
+        <include>cafebabe-idea-plugin-*.jar</include>
       </includes>
     </fileSet>
   </fileSets>

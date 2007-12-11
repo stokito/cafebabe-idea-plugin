@@ -1,6 +1,6 @@
 // IdeaHelper.java
 
-package org.google.code.cafebabe.common;
+package org.google.code.idea.common;
 
 import com.intellij.openapi.actionSystem.AnActionEvent;
 import com.intellij.openapi.actionSystem.DataContext;
@@ -78,7 +78,7 @@ public class IdeaHelper {
    */
   public ToolWindow createsToolWindow(Project project, JPanel contentPanel, String toolWindowId,
                                       ToolWindowAnchor position) {
-    return createsToolWindow( project, contentPanel, toolWindowId, position, null);
+    return createToolWindow( project, contentPanel, toolWindowId, position, null);
   }
 
   /**
@@ -91,7 +91,7 @@ public class IdeaHelper {
    * @param icon the icon
    * @return the tool window
    */
-  public ToolWindow createsToolWindow(Project project, JPanel contentPanel, String toolWindowId,
+  public ToolWindow createToolWindow(Project project, JPanel contentPanel, String toolWindowId,
                                       ToolWindowAnchor position, Icon icon) {
     ToolWindowManager toolWindowManager = ToolWindowManager.getInstance(project);
 

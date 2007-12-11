@@ -23,24 +23,53 @@
           and activate context menu. Follow "Go to method body" link. You will be redirected to 
           "Bytecode Editor" toolwindow.</li>
       <li>Now you can create/delete/edit bytecode instructions.</li>
-      <li>If you want to get explanation for a given instruction, click in Help icon.</li>
+      <li>If you want to get explanation for a given instruction, click on Help icon.</li>
     </ul>
 
     Changes:
-     1. Initial implementation. 
+      <ul>
+        <li>1.0.0
+          <ol>
+            <li>Added implementation of ClassHound service.</li>
+            <li>Added implementation of Save Class File function.</li>
+          </ol>
+        </li>
+
+        <li>0.9.0
+          <ol>
+            <li>Bug fix: disabling initial openning of plugin toolwindow</li>
+          </ol>
+        </li>
+
+        <li>0.8.0
+          <ol>
+            <li>Initial Release.</li>
+          </ol>
+        </li>
+      </ul>
   ]]></change-notes>
 
   <project-components>
     <component>
-      <implementation-class>org.google.code.cafebabe.ClassFileViewerImpl</implementation-class>
-      <interface-class>org.google.code.cafebabe.ClassFileViewerImpl</interface-class>
+      <implementation-class>org.google.code.cafebabe.CafeBabeConfiguration</implementation-class>
+      <option name="workspace" value="true"/>
+    </component>
+
+    <component>
+      <implementation-class>org.google.code.cafebabe.ClassFileViewerToolWindow</implementation-class>
+      <interface-class>org.google.code.cafebabe.ClassFileViewerToolWindow</interface-class>
+    </component>
+
+    <component>
+      <implementation-class>org.google.code.cafebabe.ClassHoundToolWindow</implementation-class>
+      <interface-class>org.google.code.cafebabe.ClassHoundToolWindow</interface-class>
     </component>
   </project-components>
 
   <actions>
-    <group id="cafebabe.ToolWindow" text="CafeBabe" popup="true">
+    <group id="cafebabe.ClassFileViewerToolWindow" text="CafeBabe" popup="true">
       <action id="cafebabe.HideCafeBabeAction"
-              class="org.google.code.cafebabe.action.HideCafeBabeAction"
+              class="org.google.code.cafebabe.action.HideClassFileViewerAction"
               text="Hide CafeBabe"
               description="Hide CafeBabe"
               icon="/actions/cancel.png">
@@ -54,7 +83,7 @@
       </action>
 
       <action id="cafebabe.CloseFileAction"
-              class="org.google.code.cafebabe.action.CloseFileAction"
+              class="org.google.code.cafebabe.action.CloseClassFileAction"
               text="Close File"
               description="Close File  in CafeBabe Bytecode Editor"
               icon="/actions/breakpoint.png">
@@ -66,8 +95,8 @@
               description="Save File in CafeBabe Bytecode Editor"
               icon="/actions/menu-saveall.png">
       </action>
-      <action id="cafebabe.ClassHoundAction"
-              class="org.google.code.cafebabe.action.ClassHoundAction"
+      <action id="cafebabe.OpenClassHoundAction"
+              class="org.google.code.cafebabe.action.OpenClassHoundAction"
               text="Display ClassHound"
               description="Display ClassHound"
               icon="/Icons/hound-16.png">
@@ -79,7 +108,15 @@
               description="About CafeBabe Plugin"
               icon="/Icons/cafebabe-16.png">
       </action>
+    </group>
 
+    <group id="cafebabe.ClassHoundToolWindow" text="ClassHound" popup="true">
+      <action id="cafebabe.CloseClassHoundAction"
+              class="org.google.code.cafebabe.action.CloseClassHoundAction"
+              text="Close ClassHound"
+              description="Close ClassHound"
+              icon="/actions/cancel.png">
+      </action>
     </group>
 
     <action id="cafebabe.ViewInCafeBabe"
