@@ -31,8 +31,8 @@
   </target>
 
   <target name="add.version">
-    <move file="target/cafebabe-idea-plugin-bin.zip" tofile="target/cafebabe-idea-plugin-bin-0.8.zip"/>
-    <move file="target/cafebabe-idea-plugin-src.zip" tofile="target/cafebabe-idea-plugin-src-0.8.zip"/>
+    <move file="target/cafebabe-idea-plugin-bin.zip" tofile="target/cafebabe-idea-plugin-bin-1.0.0.zip"/>
+    <move file="target/cafebabe-idea-plugin-src.zip" tofile="target/cafebabe-idea-plugin-src-1.0.0.zip"/>
   </target>
 
 </project>

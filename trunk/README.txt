@@ -3,9 +3,6 @@
 Run these commands to prepare binaries and sources for web site:
 
 >mvn clean
-
->mvn dependency:copy-dependencies
-
 >mvn assembly:assembly
 
 and optionally:
@@ -15,8 +12,6 @@ and optionally:
 Artifacts will be located in target directory.
 
 
-How to build
+How to build updated help.jar
 
 >ant help.jar
-
-Now you can work from IDEA
