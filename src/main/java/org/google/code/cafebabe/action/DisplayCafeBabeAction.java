@@ -25,10 +25,10 @@ public class DisplayCafeBabeAction extends IdeaAction {
    * @param event event
    */
   public void actionPerformed(final AnActionEvent event) {
-   Runnable runnable = new Runnable() {
-      public void run() {
-        Project project = helper.getProject(event);
+    final Project project = helper.getProject(event);
 
+    Runnable runnable = new Runnable() {
+      public void run() {
         ToolWindowComponent toolWindow = project.getComponent(ClassFileViewerToolWindow.class);
 
         toolWindow.setConsoleVisible(true);
