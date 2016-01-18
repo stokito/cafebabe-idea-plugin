@@ -1,0 +1,1 @@
+This plugin provides integration of [CafeBabe Bytecode Editor](http://cafebabe.sourceforge.net) with Intellij IDEA.
